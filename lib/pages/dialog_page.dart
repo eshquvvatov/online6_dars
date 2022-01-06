@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:online6_dars/pages/grid_view_page.dart';
 import 'package:online6_dars/pages/home_page.dart';
 
 class DialogPage extends StatefulWidget {
@@ -88,18 +89,21 @@ class _DialogPageState extends State<DialogPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            //android dialogni kursatadigan button
             MaterialButton(
               height: 50,
               shape: const StadiumBorder(),
               minWidth: 250,
               onPressed: _androidDialog,
-              child: const Text("Android Dialog"),
+              child: const Text("Android Dialog",style:  TextStyle(fontSize: 20, color: Colors.white),),
               color: Colors.blueAccent,
               textColor: Colors.white,
             ),
+            //Size box orasini ochish uchun
             const SizedBox(
               height: 10,
             ),
+            //IOS dialogni kursatadigan button
             MaterialButton(
               onPressed: _iosDialog,
               shape: const StadiumBorder(),
@@ -114,11 +118,28 @@ class _DialogPageState extends State<DialogPage> {
             const SizedBox(
               height: 10,
             ),
+            //Telifonga moslashib kursatadigan button
             MaterialButton(
               onPressed: display,
               shape: const StadiumBorder(),
               child: const Text(
                 "Platform",
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
+              color: Colors.blueAccent,
+              height: 50,
+              minWidth: 250,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            MaterialButton(
+              onPressed: (){
+                Navigator.pushNamed(context, GridViewPage.id);
+              },
+              shape: const StadiumBorder(),
+              child: const Text(
+                "GridView",
                 style: TextStyle(fontSize: 20, color: Colors.white),
               ),
               color: Colors.blueAccent,

@@ -6,6 +6,7 @@ import 'package:online6_dars/pages/tabbar_view.dart';
 
 import 'home_work_online6/task_1.dart';
 import 'home_work_online6/task_2.dart';
+import 'home_work_online6/task_3.dart';
 void main(){
   runApp(MyApp());
 }
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeTask2(),
+      home: HomeTask3(),
       routes: {
     DialogPage.id:(context)=>DialogPage(),
     SingleChildScroll.id:(context)=>SingleChildScroll(),
